@@ -1,16 +1,11 @@
 {% extends "base.html"%}
 {% block content %}
 <form action="" method="post">
-    {{ form.name }}
-    <br>
-    {{ form.media }}
-    <br>
-    {{ form.score }}
-    <br>
-    {{ form.review }}
-    <br>
-    {{ form.dateviewed }}
-    <br>
-    {{ form.csrf_token}}
+    <p><label>Name: {{ form.name }} </label></p>
+    <p><label>Score: {{ form.score }} </label></p>
+    <p><label>Review: {{ form.review }} </label></p>
+    <p><label>Date Viewed: {{ form.dateviewed }} </label></p>
+    {{ form.csrf_token }}
+    <p><button type='submit'>Submit</button></p>
 </form>
 {% endblock %}
